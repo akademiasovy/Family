@@ -7,7 +7,7 @@ public class Person {
     private double height ;
     private int weight;
     private char status; // S, M, D, W
-    private Mobile mobile;
+    private Mobile mobile; // default null
 
     public Person(String name, int age, double height, int weight,boolean gender, char status) {
         this.name = name;
@@ -83,5 +83,27 @@ public class Person {
 
     public int getAge() {
         return this.age;
+    }
+
+    public boolean hasMobilePhone(){
+        if(mobile==null)
+            return false;
+        else
+            return true;
+    }
+
+    public void print(){
+        System.out.println("---------------------------");
+        System.out.println("  Name: "+name);
+        System.out.println("  Age:  "+age);
+        System.out.println("  Height/weight: "+height+"/"+weight);
+        System.out.println("  BMI: "+calculateBMI()+"("+getBMIStatus()+")");
+        System.out.println("  Gender: "+gender);
+        System.out.println("  Status: "+status);
+        if(hasMobilePhone())
+        {
+            System.out.println("  Phone: "+mobile.getPhoneNumber());
+        }
+        System.out.println("---------------------------");
     }
 }

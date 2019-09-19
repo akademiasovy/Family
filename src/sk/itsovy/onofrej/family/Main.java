@@ -32,7 +32,14 @@ public class Main {
         System.out.println("Person 1 is "+person1.getAge()+" yo");
 
         Person student=new Person("Oliver", 19, 1.88, 97, true, 'S');
+        student.setMobile(mobile2);
 
+        if(student.hasMobilePhone())
+                System.out.println("Phone number: "+student.getMobile().getPhoneNumber());
+        else
+                System.out.println("Student has no mobile !");
+
+        person2.print();
     }
 
 }
