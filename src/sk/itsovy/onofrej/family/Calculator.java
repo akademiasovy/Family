@@ -66,5 +66,19 @@ public class Calculator {
             return null;
     }
 
+    public double calculateRectDiagonal(int a, int b){
+
+       if(isPower())
+           return Math.sqrt(Math.pow(a,2)+b*b);
+       else
+           return 0;
+    }
+
+    public double calcCircleArea(double radius){
+        if(isPower())
+            return Math.PI * radius * radius;
+        else
+            return 0;
+    }
 
 }
