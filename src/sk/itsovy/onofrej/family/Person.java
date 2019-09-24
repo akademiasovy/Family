@@ -8,6 +8,7 @@ public class Person {
     private int weight;
     private char status; // S, M, D, W
     private Mobile mobile; // default null
+    private Calculator calculator;
 
     public Person(String name, int age, double height, int weight,boolean gender, char status) {
         this.name = name;
@@ -105,5 +106,17 @@ public class Person {
             System.out.println("  Phone: "+mobile.getPhoneNumber());
         }
         System.out.println("---------------------------");
+    }
+
+    public Calculator getCalculator() {
+        return calculator;
+    }
+
+    public void setCalculator(Calculator calculator) {
+        this.calculator = calculator;
+    }
+
+    public boolean hasCalculator(){
+        return calculator!=null;
     }
 }

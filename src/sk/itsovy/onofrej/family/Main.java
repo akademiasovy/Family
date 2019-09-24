@@ -1,5 +1,7 @@
 package sk.itsovy.onofrej.family;
 
+import sk.itsovy.onofrej.other.FreeClass;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -40,6 +42,21 @@ public class Main {
                 System.out.println("Student has no mobile !");
 
         person2.print();
+
+        Calculator casio=new Calculator("Casio FX552");
+        person2.setCalculator(casio);
+
+        if(person2.hasCalculator()){
+            casio.turnOn();
+            System.out.println(person2.getCalculator().add(58,77));
+            System.out.println(person2.getCalculator().convertDecimalToBinary(85473));
+        }
+
+        FreeClass fc = new FreeClass();
+        fc.sayNHello(12);
+
+
+
     }
 
 }
