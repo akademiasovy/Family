@@ -39,14 +39,26 @@ public class FreeClass {
 
     }
 
-    public String generatePassword(int n){
-        if(n<6 || n>30)  // kontrola dlzky hesla
+    /**
+     * @author Roland Onofrej
+     * @date 11.10.2019
+     * @param n length of the password
+     * @param rules if true, then 6<length<31, minvat least one digit, upper, lower letter
+     * @description this method generates a random password
+     * @return
+     */
+    public String generatePassword(int n, boolean rules){
+        if(rules==true && (n<6 || n>30) )  // kontrola dlzky hesla
             n = 10;
+
         String passwd="";
         int count=0;
         int digits=0;
         int upper=0;
         int lower=0;
+        if(rules==false){
+            digits=upper=lower=1;
+        }
         int num=0;
         Random rnd=new Random();
         do{
